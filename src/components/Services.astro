@@ -1,0 +1,47 @@
+---
+import ServiceItemCard from "./ServiceItemCard.astro";
+---
+
+<section class="container mx-auto pt-10 p-4 sm:px-24 flex flex-col gap-8">
+  <h2 class="text-center text-primary font-black text-4xl md:text-5xl">
+    Servicios
+  </h2>
+  <ul class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+    <ServiceItemCard
+      imageFront="/images/icons/CONSULTORIA.webp"
+      imageBack="/images/icons/CONSULTORIA-2.webp"
+      title="Consultoría"
+      description="Obtén asesoramiento experto y orientación estratégica personalizada, basadas en análisis profundos y su amplia experiencia, para impulsar el crecimiento y el éxito de tu negocio."
+    />
+    <ServiceItemCard
+      imageFront="/images/icons/REDES-SOCIALES.webp"
+      imageBack="/images/icons/REDES-SOCIALES-2.webp"
+      title="Redes y Marketing Digital"
+      description="Creamos estrategias alineadas con tus metas comerciales y gestionamos tus redes para que te enfoques en hacer crecer tu negocio. ¡Llega a tu público eficientemente!"
+    />
+    <ServiceItemCard
+      imageFront="/images/icons/BRANDING.webp"
+      imageBack="/images/icons/BRANDING-2.webp"
+      title="Branding"
+      description="Forja una marca sólida y relevante. Definimos tu propuesta única y creamos una estrategia de branding efectiva para conectar con tu audiencia."
+    />
+    <ServiceItemCard
+      imageFront="/images/icons/COPYWRITING.webp"
+      imageBack="/images/icons/COPYWRITING-2.webp"
+      title="Copywriting"
+      description="Genera contenido valioso que atraiga y convierta. Creamos historias persuasivas que conecten y den resultados tangibles."
+    />
+    <ServiceItemCard
+      imageFront="/images/icons/DISENO-GRAFICO.webp"
+      imageBack="/images/icons/DISENO-GRAFICO-2.webp"
+      title="Diseño gráfico y audiovisual"
+      description="Innovamos en campañas para destacar en mercado saturado. Impresas y digitales, llegamos a tu audiencia y generamos impacto."
+    />
+    <ServiceItemCard
+      imageFront="/images/icons/DISENO-WEB.webp"
+      imageBack="/images/icons/DISENO-WEB-2.webp"
+      title="Desarrollo Web"
+      description="Crea presencia web impactante. Diseñamos sitios profesionales que convierten visitantes en clientes leales con experiencias excepcionales."
+    />
+  </ul>
+</section>

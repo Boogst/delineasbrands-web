@@ -1,0 +1,14 @@
+---
+const { image, name} = Astro.props
+
+const alt = name ? `Cliente de Delineas Brands: ${name}` : 'Cliente de Delineas Brands'
+
+
+---
+<picture class="p-4 h-36 min-w-[50px] bg-secondary rounded-md ">
+  <img
+    src={image}
+    alt={alt}
+    class="h-full w-auto cursor-pointer hover:scale-110 transition"
+  />
+</picture>

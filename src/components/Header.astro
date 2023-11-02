@@ -1,0 +1,46 @@
+---
+import Logo from "../icons/Logo.astro";
+---
+
+<header id="header" class="shadow-sm">
+  <div class="p-4 sm:px-24 flex items-center container mx-auto">
+    <Logo className="w-28 sm:w-48 mr-auto" />
+    <nav class="flex gap-3 sm:gap-8 text-xs md:text-lg font-semibold">
+      <a
+        href="/"
+        class="inline-block hover:text-primary hover:scale-105 transition"
+        >Conócenos</a
+      >
+      <a
+        href="/"
+        class="inline-block hover:text-primary hover:scale-105 transition"
+        >Portafolio</a
+      >
+      <a
+        href="/"
+        class="inline-block hover:text-primary hover:scale-105 transition"
+        >Contacto</a
+      >
+    </nav>
+  </div>
+</header>
+
+<style>
+  #header {
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+    animation: add-shadow linear both;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+  }
+  @keyframes add-shadow {
+    100% {
+      box-shadow:
+        0 5px 50px -5px hsla(0, 0%, 100%, 0.1),
+        0 0 0 1px hsla(0, 0%, 100%, 0.1);
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+</style>

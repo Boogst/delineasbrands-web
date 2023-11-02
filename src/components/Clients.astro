@@ -1,0 +1,53 @@
+---
+import ClientPill from "./ClientPill.astro";
+import Marquee from "./Marquee.astro";
+---
+
+<section class="pt-10 p-4 sm:px-24 container mx-auto flex flex-col gap-8">
+  <h2 class="text-center text-primary font-black text-4xl md:text-5xl">
+    Nuestros Clientes
+  </h2>
+  <div class="overflow-hidden flex flex-col gap-4 relative">
+    <Marquee>
+      <ClientPill name="2bsolutions" image="/images/clients/2bsolutions.webp" />
+      <ClientPill name="acesco" image="/images/clients/acesco.webp" />
+      <ClientPill name="bmi" image="/images/clients/bmi.webp" />
+      <ClientPill name="botika" image="/images/clients/botika.webp" />
+      <ClientPill
+        name="cannabis-house"
+        image="/images/clients/cannabis-house.webp"
+      />
+      <ClientPill name="col-cranes" image="/images/clients/col-cranes.webp" />
+    </Marquee>
+    <Marquee className="![animation-direction:reverse]">
+      <ClientPill name="2bsolutions" image="/images/clients/2bsolutions.webp" />
+      <ClientPill name="acesco" image="/images/clients/acesco.webp" />
+      <ClientPill name="bmi" image="/images/clients/bmi.webp" />
+      <ClientPill name="botika" image="/images/clients/botika.webp" />
+      <ClientPill
+        name="cannabis-house"
+        image="/images/clients/cannabis-house.webp"
+      />
+      <ClientPill name="col-cranes" image="/images/clients/col-cranes.webp" />
+    </Marquee>
+    <Marquee>
+      <ClientPill name="2bsolutions" image="/images/clients/2bsolutions.webp" />
+      <ClientPill name="acesco" image="/images/clients/acesco.webp" />
+      <ClientPill name="bmi" image="/images/clients/bmi.webp" />
+      <ClientPill name="botika" image="/images/clients/botika.webp" />
+      <ClientPill
+        name="cannabis-house"
+        image="/images/clients/cannabis-house.webp"
+      />
+      <ClientPill name="col-cranes" image="/images/clients/col-cranes.webp" />
+    </Marquee>
+    <div
+      class="absolute inset-y-0 left-0 w-40 pointer-events-none from-[#fff] to-transparent bg-gradient-to-r"
+    >
+    </div>
+    <div
+      class="absolute inset-y-0 right-0 w-1/4 pointer-events-none bg-gradient-to-l from-[#fff]"
+    >
+    </div>
+  </div>
+</section>
