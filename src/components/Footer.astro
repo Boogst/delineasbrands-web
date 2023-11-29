@@ -1,0 +1,73 @@
+---
+import WhatsappIcon from '../icons/WhatsappIcon.astro'
+import InstagramIcon from '../icons/InstagramIcon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import FacebookIcon from '../icons/FacebookIcon.astro'
+import LogoBlank from '../icons/LogoBlank.astro'
+
+import { WHATSAPP_URL } from '../const'
+
+
+---
+
+<footer class="bg-primary text-white py-16 ">
+  <div class="px-4 sm:px-24 container mx-auto flex gap-24 items-start justify-between flex-wrap">
+    <div class="flex-grow flex flex-wrap gap-12 items-start justify-between">
+      <nav class="flex flex-col gap-4">
+        <h3 class="font-black text-2xl">
+          MENÚ
+        </h3>
+        <a href="#">
+          Conócenos
+        </a>
+        <a href="#">
+          Portafolio
+        </a>
+        <a href="/contact">
+          Contacto
+        </a>
+      </nav>
+      <nav class="flex flex-col gap-4">
+        <h3 class="font-black text-2xl">
+          HABLEMOS
+        </h3>
+        <a 
+          class="flex gap-2 items-center" 
+          
+          href={WHATSAPP_URL}
+          target="_blank">
+          <WhatsappIcon />
+          +57 3163436514 
+        </a>
+      </nav>
+  
+      <nav class="flex flex-col gap-4">
+        <h3 class="font-black text-2xl">
+          ESCRíBENOS
+        </h3>
+        <a href="mailto:info@delineasbrands.com" >
+          info@delineasbrands.com
+        </a>
+        <div class="flex gap-4 items-center">
+          <h4 class="font-normal">
+            Síguenos en:
+          </h4>
+          <ul class="flex gap-4">
+            <li><InstagramIcon /></li>
+            <li><FacebookIcon /></li>
+            <li><LinkedinIcon /></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <aside class="w-full sm:w-auto flex justify-center items-center flex-col gap-4">
+      <LogoBlank />
+      <small>
+        Barranquilla, Colombia
+      </small>
+    </aside>
+  </div>
+</footer>
+<aside class="bg-[#1b1536] text-white p-8 font-black text-center">
+  DELINEAS BRANDS SAS
+</aside>

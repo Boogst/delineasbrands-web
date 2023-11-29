@@ -1,10 +1,12 @@
 ---
-import Logo from "../icons/Logo.astro";
+import LogoIcon from "../icons/LogoIcon.astro";
 ---
 
-<header id="header" class="shadow-sm">
+<header id="header">
   <div class="p-4 sm:px-24 flex items-center container mx-auto">
-    <Logo className="w-28 sm:w-48 mr-auto" />
+    <a href="/" class="mr-auto">
+      <LogoIcon className="w-28 sm:w-48" />
+    </a>
     <nav class="flex gap-3 sm:gap-8 text-xs md:text-lg font-semibold">
       <a
         href="/"
@@ -12,12 +14,12 @@ import Logo from "../icons/Logo.astro";
         >Conócenos</a
       >
       <a
-        href="/"
+        href="/portfolio"
         class="inline-block hover:text-primary hover:scale-105 transition"
         >Portafolio</a
       >
       <a
-        href="/"
+        href="/contact"
         class="inline-block hover:text-primary hover:scale-105 transition"
         >Contacto</a
       >
@@ -33,13 +35,13 @@ import Logo from "../icons/Logo.astro";
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px);
-    z-index: 9999;
+    z-index: 40;
   }
   @keyframes add-shadow {
     100% {
       box-shadow:
-        0 5px 50px -5px hsla(0, 0%, 100%, 0.1),
-        0 0 0 1px hsla(0, 0%, 100%, 0.1);
+        0 5px 50px -5px hsla(0, 7%, 13%, 0.1),
+        0 0 0 1px hsla(0, 10%, 13%, 0.1);
       background: rgba(255, 255, 255, 0.3);
     }
   }

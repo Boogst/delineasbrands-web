@@ -1,12 +1,14 @@
 ---
-const { className } = Astro.props;
+const { class: className } = Astro.props;
 ---
 
-<div
-  role="marquee"
-  class:list={["animate-marquee flex items-stretch w-max gap-4", className]}
->
-  <slot />
+<div class="marquee flex w-max gap-4" role="marquee">
+  <div class:list={["animate-marquee flex items-stretch w-max gap-4", className]}>
+    <slot />
+  </div>
+  <div class:list={["animate-marquee flex items-stretch w-max gap-4", className]}>
+    <slot />
+  </div>
 </div>
 
 <style>
@@ -19,7 +21,7 @@ const { className } = Astro.props;
     animation: marquee var(--duration) linear infinite;
   }
 
-  .animate-marquee:hover {
+  .marquee:hover .animate-marquee  {
     animation-play-state: paused;
   }
 
@@ -28,7 +30,7 @@ const { className } = Astro.props;
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-50% - var(--gap) / 2));
+      transform: translateX(calc(-100% - var(--gap) / 2));
     }
   }
 </style>

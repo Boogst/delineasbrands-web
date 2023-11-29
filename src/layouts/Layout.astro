@@ -1,9 +1,11 @@
 ---
+import WhatsappButton from '../components/WhatsappButton.astro';
 interface Props {
   title: string;
+  class?: string;
 }
 
-const { title } = Astro.props;
+const { title, class: className } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,15 +15,16 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="text/javascript" id="hs-script-loader" defer src="//js-na1.hs-scripts.com/44276203.js"></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class={className}>
     <slot />
+    <WhatsappButton />
   </body>
 </html>
 <style is:global>
-
 @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/Montserrat-VariableFont_wght.ttf') format("truetype-variations");
@@ -43,7 +46,6 @@ const { title } = Astro.props;
   *::before,
   *::after {
     box-sizing: border-box;
-		font-family: 'Montserrat', sans-serif;
   }
   /*
   2. Remove default margin
@@ -58,6 +60,7 @@ const { title } = Astro.props;
 */
   body {
     line-height: 1.5;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   /*
@@ -93,3 +96,15 @@ const { title } = Astro.props;
     overflow-wrap: break-word;
   }
 </style>
+<script>
+  import { initCarousels } from '../lib/Carousels.js';
+  import { initModals } from '../lib/Modal';
+  
+  Promise.allSettled([
+    initCarousels(),
+    initModals(),
+  ]).then(() => {
+    console.log('Init - All done!');
+  });
+
+</script>

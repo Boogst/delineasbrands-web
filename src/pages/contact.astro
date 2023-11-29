@@ -1,0 +1,58 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import { WHATSAPP_URL } from "../const";
+import MailIcon from "../icons/MailIcon.astro";
+import WhatsappIcon from "../icons/WhatsappIcon.astro";
+---
+
+
+
+<Layout title="Delineas Brands" class="flex flex-col h-screen">
+  <Header />
+  <main class="flex-grow my-8 px-4 grid grid-cols-1 items-start gap-16 container mx-auto pt-10 sm:px-24 lg:grid-cols-[340px,1fr]">
+    <aside class="bg-primary text-white p-8 rounded-3xl flex flex-col gap-4">
+      <h2 class="font-black text-2xl max-w-[10ch]">¡Llámanos o escríbenos!</h2>
+      <p class="max-w-[21ch]">
+        Descubre todo lo que podemos hacer por tu marca 
+      </p>
+      <nav class="flex flex-col gap-4">
+        <div class="flex gap-4 items-center justify-start">
+          <MailIcon />
+          <div>
+            <h3 class="font-bold">Email:</h3>
+            <a href="mailto:info@delineasbrands.com" target="_blank">info@delineasbrands.com</a>
+          </div>
+        </div>
+        <div class="flex gap-4 items-center justify-start">
+          <WhatsappIcon />
+          <div>
+            <h3 class="font-bold">WhatsApp:</h3>
+            <a href={WHATSAPP_URL} target="_blank">+57 3163436514</a>
+          </div>
+        </div>
+      </nav>
+      <img src="/images/avatars/NATALIA-3.webp" alt="Foto de Natalia" />
+    </aside>
+    <section class="w-full flex flex-col gap-4">
+      <h1 class="text-primary font-black text-3xl">Este es el punto de partida <span class="block">de un gran camino juntos</span> </h1>
+      <form id="form"></form>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script
+  charset="utf-8"
+  type="text/javascript"
+  src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  window.hbspt.forms.create({
+    region: "na1",
+    portalId: "44276203",
+    locale: "es",
+    target: "form",
+    formId: "4c9e9a49-4666-48ea-bdb8-70b8f9481a5e",
+  });
+</script>

@@ -1,10 +1,80 @@
 ---
-import Slidy from "./Slidy";
-
+import Carousel from "./Carousel.astro";
+import CarouselItem from "./CarouselItem.astro";
+import LightBulbOnIcon from "../icons/LightBulbOnIcon.astro";
 ---
 
-<section>
-  <Slidy client:idle>
-    a
-  </Slidy>
-</section>
+<Carousel>
+  <CarouselItem>
+    <section class="grid grid-cols-1 xl:grid-cols-2 h-full">
+      <picture class="hidden p-8 xl:flex justify-center items-center">
+        <img src="/images/HERO-1.webp" alt="Foto del Banner principal"  class="h-56 md:h-[560px]"/>
+      </picture>
+      <article
+        class="bg-secondary flex flex-col gap-4 justify-center items-center"
+      >
+        <h1
+          class="text-primary text-lg md:text-2xl lg:text-4xl text-center max-w-[30ch]"
+        >
+          ¿Estás buscando <strong
+            >impulsar tu negocio y aprovechar todo el potencial</strong
+          > de los diferentes canales?
+        </h1>
+        <span class="w-8 lg:w-16">
+          <LightBulbOnIcon />
+        </span>
+        <p class="text-white text-lg lg:text-3xl max-w-[40ch] text-center">
+          ¡Bienvenid@ al mundo de las <strong>marcas extraordinarias</strong>
+          con <strong class="text-2xl sm:text-5xl block font-black">DELINEAS BRANDS!</strong
+          >
+        </p>
+      </article>
+    </section>
+  </CarouselItem>
+  <CarouselItem>
+    <section class="grid grid-cols-1 xl:grid-cols-2 h-full">
+      <article class="bg-quaternary p-8 flex flex-col gap-4 justify-center items-center overflow-hidden xl:items-end">
+        <header class="relative h-20 mb-8">
+					<h2 class="xl:absolute xl:-right-12  text-2xl lg:text-5xl font-black text-white border-4 p-4 border-tertiary xl:pr-16">
+						#WeAreDelineas
+					</h2>
+				</header>
+        <p class="text-white text-xl md:text-3xl text-center xl:text-left">
+					<strong>Amamos tu marca, </strong>
+					<span class="block">tanto como tú</span>
+				</p>
+      </article>
+      <picture class="hidden xl:flex justify-center items-center">
+        <img src="/images/HERO-2.webp" alt="Foto del Banner principal" class="h-56 md:h-[560px]" />
+      </picture>
+    </section>
+  </CarouselItem>
+  <CarouselItem>
+    <section class="grid grid-cols-1 2xl:grid-cols-5 h-full 2xl:relative">
+      <picture class="hidden 2xl:block 2xl:absolute 2xl:top-0 2xl:left-32">
+        <img src="/images/HERO-3.webp" alt="Foto del Banner principal" class="h-56 md:h-[560px]" />
+      </picture>
+      <article class="bg-primary p-8 flex flex-col gap-4 justify-center items-center overflow-hidden lg:col-span-full 2xl:col-start-2 2xl:col-end-6">
+        <h2 class="text-white text-center text-4xl xl:text-7xl lg:text-4xl">
+          Tu marca,
+          <strong class="block">¡SOLO TUYA!</strong>
+        </h2>
+        <picture class="w-16 lg:w-24 xl:w-32">
+          <img src="/images/icons/MEGAFONO.webp" alt="Megáfono" />
+        </picture>
+        <p class="text-white text-2xl lg:text-xl xl:text-5xl text-center">
+					Regístrala con nosotros
+				</p>
+        <a href="/contact" class="bg-white text-primary py-3 px-8 w-max rounded-full font-bold hover:scale-105 transition text-xl xl:py-4 xl:px-16 xl:text-2xl">
+          ¡Hablemos!
+        </a>
+      </article>
+    </section>
+  </CarouselItem>
+</Carousel>
+
+<style>
+  section {
+    text-wrap: balance;
+  }
+</style>
