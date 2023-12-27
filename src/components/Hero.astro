@@ -8,7 +8,7 @@ import LightBulbOnIcon from "../icons/LightBulbOnIcon.astro";
   <CarouselItem>
     <section class="grid grid-cols-1 xl:grid-cols-2 h-full">
       <picture class="hidden p-8 xl:flex justify-center items-center">
-        <img src="/images/HERO-1.webp" alt="Foto del Banner principal"  class="h-56 md:h-[560px]"/>
+        <img src="/images/HERO-1.webp" alt="Foto del Banner principal"  class="h-56 md:h-[560px] object-contain"/>
       </picture>
       <article
         class="bg-secondary flex flex-col gap-4 justify-center items-center"
@@ -45,16 +45,16 @@ import LightBulbOnIcon from "../icons/LightBulbOnIcon.astro";
 				</p>
       </article>
       <picture class="hidden xl:flex justify-center items-center">
-        <img src="/images/HERO-2.webp" alt="Foto del Banner principal" class="h-56 md:h-[560px]" />
+        <img src="/images/HERO-2.webp" alt="Foto del Banner principal" class="h-56 md:h-[560px] object-contain" />
       </picture>
     </section>
   </CarouselItem>
   <CarouselItem>
-    <section class="grid grid-cols-1 2xl:grid-cols-5 h-full 2xl:relative">
-      <picture class="hidden 2xl:block 2xl:absolute 2xl:top-0 2xl:left-32">
-        <img src="/images/HERO-3.webp" alt="Foto del Banner principal" class="h-56 md:h-[560px]" />
+    <section class="grid grid-cols-1 xl:grid-cols-5 h-full xl:relative">
+      <picture class="hidden xl:block xl:absolute xl:top-1/2 xl:transform xl:-translate-y-1/2 xl:left-32">
+        <img src="/images/HERO-3.webp" alt="Foto del Banner principal" class="h-56 xl:h-[360px] 2xl:h-[500px]" />
       </picture>
-      <article class="bg-primary p-8 flex flex-col gap-4 justify-center items-center overflow-hidden lg:col-span-full 2xl:col-start-2 2xl:col-end-6">
+      <article class="bg-primary p-8 flex flex-col gap-4 justify-center items-center overflow-hidden lg:col-span-full xl:col-start-2 xl:col-end-6">
         <h2 class="text-white text-center text-4xl xl:text-7xl lg:text-4xl">
           Tu marca,
           <strong class="block">¡SOLO TUYA!</strong>

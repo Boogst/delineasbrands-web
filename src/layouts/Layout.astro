@@ -112,6 +112,14 @@ const { title, class: className } = Astro.props;
   h6 {
     overflow-wrap: break-word;
   }
+
+  .medium-zoom-image--opened{
+    z-index: 100;
+  }
+
+  .medium-zoom-overlay{
+    z-index: 100;
+  }
 </style>
 <script>
   import { initCarousels } from "../lib/Carousels.js";

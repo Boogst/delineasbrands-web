@@ -3,14 +3,22 @@
     Proyectos
   </h2>
   <div class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-8">
-      <img src="/images/projects/NICOLL-BEAUTY.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg lg:col-span-2 lg:row-span-2 aspect-video hover:scale-105 transition-transform">
-      <img src="/images/projects/SERVIPARAMO.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
-      <img src="/images/projects/NICOLL-BEAUTY.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
-      <img src="/images/projects/SERVIPARAMO.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg aspect-video lg:col-span-2 lg:row-span-2 hover:scale-105 transition-transform">
-      <img src="/images/projects/SERVIPARAMO.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
-      <img src="/images/projects/NICOLL-BEAUTY.webp" alt="Nicoll Beauty" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/SF.webp" alt="Imagen de proyecto San francisco" class="rounded-lg shadow-lg lg:col-span-2 lg:row-span-2 aspect-video hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/2B.webp" alt="Imagen de proyecto 2B Solutions" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/SES.webp" alt="Imagen de proyecto SES" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/STECKERL.webp" alt="Imagen de proyecto Steckerl" class="rounded-lg shadow-lg aspect-video lg:col-span-2 lg:row-span-2 hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/H&A.webp" alt="Imagen de proyecto de hierros y aceros" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
+      <img data-zoomable src="/images/projects/ACESCO.webp" alt="Imagen de proyecto de Acesco" class="rounded-lg shadow-lg aspect-video hover:scale-105 transition-transform">
   </div>
   <a href="#" class="bg-primary text-white py-6 px-16 w-max rounded-full font-bold hover:scale-105 transition text-2xl">
     Conoce más
   </a>
 </section>
+
+<script>
+  import mediumZoom from 'medium-zoom'
+  mediumZoom('[data-zoomable]', {
+    background: 'rgba(0,0,0,0.8)'
+  })
+  
+</script>
