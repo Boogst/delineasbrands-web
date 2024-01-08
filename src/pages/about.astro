@@ -1,0 +1,158 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Member from "../components/Member.astro";
+
+const team = [
+  {
+    name: "NATALIA ROMERO",
+    role: "CEO",
+    avatar: "/images/avatars/NATALIA-4.webp",
+    description:
+      "Administradora de empresas de la universidad del Norte, Magister en Marketing estratégico y comunicación digital de EUDE BUSINESS SCHOOL de Madrid, con más de 9 años de experiencia en consultoría en marketing y comunicaciones. Mentora de marca personal y de negocios",
+    phrase: "Es la Arquitecta de Estrategias Exitosas",
+  },
+  {
+    name: "DIANA CRUZ",
+    role: "DIRECTORA DE ARTE",
+    avatar: "/images/avatars/DIANA.webp",
+    description:
+      "Diseñadora Gráfica, egresada de la U. Jorge Tadeo Lozano de Bogotá. Con más de 8 años de experiencia en branding, desarrollo de marca, ilustración, e-learning y diseño UX.",
+    phrase: "¡Ella da vida a tus ideas!",
+  },
+  {
+    name: "ALEJANDRO HERNANDEZ",
+    role: "Diseñador Gráfico y Realizador Audiovisual",
+    avatar: "/images/avatars/ALEJANDRO.webp",
+    description:
+      "Egresado de la U. Jorge Tadeo Lozano de Bogotá. Con más de 5 años de experiencia, con más de 5 años creando contenido digital impactante para redes sociales, producción de video, fotografía para marcas, y motion graphics. ",
+    phrase: "¡Su creatividad es de otro mundo!",
+  },
+  {
+    name: "LUIS VILLEGAS",
+    role: "Desarrollador Web",
+    avatar: "/images/avatars/LUIS.webp",
+    description:
+      "Con más de 4 años como Engineering Team Lead, destaco por impulsar tecnologías modernas, reducir costos de infraestructura y liderar migraciones exitosas. Soy Ingeniero de Sistemas graduado con honores.",
+    phrase: "¡Dedicado a transformar desafíos en oportunidades y construir un futuro innovador!",
+  },
+  {
+    name: "LEONARDO LOZANO",
+    role: "Diseñador Gráfico",
+    avatar: "/images/avatars/LEONARDO.webp",
+    description:
+      "Egresado de la U. Jorge Tadeo Lozano de Bogotá, con más de 4 años de trayectoria, experto en contenido digital, redes sociales, branding e identidad corporativa.",
+    phrase: "¡Transforma tus ideas en arte visual!",
+  },
+  {
+    name: "MA. FERNANDA MARTINEZ",
+    role: "SOCIAL MEDIA MANAGER",
+    avatar: "/images/avatars/FERNANDA.webp",
+    description:
+      "Comunicadora social y periodista de la Universidad del Norte con +3 años de experiencia en marketing digital, manejo de herramientas de edición, medición y estadísticas de redes sociales, creación de contenido, manejo de Ads y SEO.",
+    phrase: "Ella conecta Marcas con Corazones y Mentes.",
+  },
+  {
+    name: "KAROL ARENAS",
+    role: "DIRECTORA DE COMUNICACIONES",
+    avatar: "/images/avatars/KAROL.webp",
+    description:
+      "Comunicadora social y periodista con +3 años de experiencia en el sector organizacional con énfasis en administración de redes, creación de contenido, manejo de Ads y gestión de herramientas de innovación digital.",
+    phrase: "¡Ella impulsa nuestra presencia digital hacia nuevos horizontes!",
+  },
+];
+---
+
+<Layout title="Delineas Brands | Nosotros">
+  <Header />
+  <main>
+    <header class="dualcolor">
+      <div
+        class="container mx-auto p-4 sm:px-24 grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 items-center justify-items-center gap-8 relative"
+      >
+        <div class="space-y-8 *:text-primary py-10">
+          <p class="text-wrap text-lg lg:text-xl">
+            Nos impulsa una pasión inquebrantable por la innovación y una
+            dedicación sin límites al éxito de nuestros clientes. Cada proyecto
+            es un lienzo donde nuestras ideas audaces cobran vida, transformando
+            visiones en realidades impactantes.
+          </p>
+          <p class="text-wrap text-lg lg:text-xl">
+            ¡Descubre cómo podemos transformar tu visión en una realidad
+            vibrante y exitosa!
+          </p>
+          <h1
+            class="font-extrabold p-4 border-8 border-quaternary text-2xl lg:text-3xl xl:text-5xl"
+          >
+            NUESTRO EQUIPO
+          </h1>
+        </div>
+        <img
+          src="/images/avatars/TEAM.webp"
+          alt="Equipo de trabajo"
+          class="relative z-10 object-cover"
+        />
+      </div>
+    </header>
+    <section class="container mx-auto px-4 py-32 sm:px-24 gap-x-8 gap-y-32">
+      {
+        team.map((member) => (
+          <>
+            <Member
+              name={member.name}
+              role={member.role}
+              avatar={member.avatar}
+              description={member.description}
+              target={`popover-${member.name}`}
+            />
+            <div
+              data-popover
+              id={`popover-${member.name}`}
+              role="tooltip"
+              class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-primary rounded-lg shadow-sm opacity-0"
+            >
+              <div class="px-3 py-2 text-primary text-center">
+                <p>
+                  {member.phrase}
+                </p>
+              </div>
+              <div data-popper-arrow />
+            </div>
+          </>
+        ))
+      }
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dualcolor {
+    background: linear-gradient(
+      180deg,
+      #ffd300 0%,
+      #ffd300 50%,
+      #ffffff 50%,
+      #ffffff 100%
+    );
+  }
+
+  @media (width >= 1024px) {
+    .dualcolor {
+      background: linear-gradient(
+        90deg,
+        #ffd300 0%,
+        #ffd300 50%,
+        #ffffff 50%,
+        #ffffff 100%
+      );
+    }
+  }
+</style>

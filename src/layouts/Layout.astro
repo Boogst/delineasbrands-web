@@ -1,5 +1,6 @@
 ---
 import WhatsappButton from "../components/WhatsappButton.astro";
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   class?: string;
@@ -22,6 +23,7 @@ const { title, class: className } = Astro.props;
       src="//js-na1.hs-scripts.com/44276203.js"></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class={className}>
     <slot />
@@ -123,9 +125,10 @@ const { title, class: className } = Astro.props;
 </style>
 <script>
   import { initCarousels } from "../lib/Carousels.js";
-  import { initModals } from "../lib/Modal";
+  import { initModals } from "../lib/Modal.js";
+  import { initPopovers } from "../lib/Popover.js";
 
-  Promise.allSettled([initCarousels(), initModals()]).then(() => {
+  Promise.allSettled([initCarousels(), initModals(), initPopovers()]).then(() => {
     console.log("Init - All done!");
   });
 </script>

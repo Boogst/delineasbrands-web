@@ -5,6 +5,7 @@ class Instances {
         this._instances = {
             Carousel: {},
             Modal: {},
+            Popover: {},
         };
     }
 

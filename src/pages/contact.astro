@@ -7,22 +7,24 @@ import MailIcon from "../icons/MailIcon.astro";
 import WhatsappIcon from "../icons/WhatsappIcon.astro";
 ---
 
-
-
-<Layout title="Delineas Brands" class="flex flex-col h-screen">
+<Layout title="Delineas Brands | Contacto" class="flex flex-col h-screen">
   <Header />
-  <main class="flex-grow my-8 px-4 grid grid-cols-1 items-start gap-16 container mx-auto pt-10 sm:px-24 lg:grid-cols-[340px,1fr]">
+  <main
+    class="flex-grow my-8 px-4 grid grid-cols-1 items-start gap-16 container mx-auto pt-10 sm:px-24 lg:grid-cols-[340px,1fr]"
+  >
     <aside class="bg-primary text-white p-8 rounded-3xl flex flex-col gap-4">
       <h2 class="font-black text-2xl max-w-[10ch]">¡Llámanos o escríbenos!</h2>
       <p class="max-w-[21ch]">
-        Descubre todo lo que podemos hacer por tu marca 
+        Descubre todo lo que podemos hacer por tu marca
       </p>
       <nav class="flex flex-col gap-4">
         <div class="flex gap-4 items-center justify-start">
           <MailIcon />
           <div>
             <h3 class="font-bold">Email:</h3>
-            <a href="mailto:info@delineasbrands.com" target="_blank">info@delineasbrands.com</a>
+            <a href="mailto:info@delineasbrands.com" target="_blank"
+              >info@delineasbrands.com</a
+            >
           </div>
         </div>
         <div class="flex gap-4 items-center justify-start">
@@ -36,7 +38,11 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
       <img src="/images/avatars/NATALIA-3.webp" alt="Foto de Natalia" />
     </aside>
     <section class="w-full flex flex-col gap-4">
-      <h1 class="text-primary font-black text-3xl">Este es el punto de partida <span class="block">de un gran camino juntos</span> </h1>
+      <h1 class="text-primary font-black text-3xl">
+        Este es el punto de partida <span class="block"
+          >de un gran camino juntos</span
+        >
+      </h1>
       <form id="form"></form>
     </section>
   </main>
