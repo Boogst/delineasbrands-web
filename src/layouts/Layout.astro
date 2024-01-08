@@ -1,6 +1,5 @@
 ---
 import WhatsappButton from "../components/WhatsappButton.astro";
-import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   class?: string;
@@ -23,7 +22,6 @@ const { title, class: className } = Astro.props;
       src="//js-na1.hs-scripts.com/44276203.js"></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions />
   </head>
   <body class={className}>
     <slot />
