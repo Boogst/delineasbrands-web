@@ -22,6 +22,14 @@ const team = [
     phrase: "¡Ella da vida a tus ideas!",
   },
   {
+    name: "KAROL ARENAS",
+    role: "DIRECTORA DE COMUNICACIONES",
+    avatar: "/images/avatars/KAROL.webp",
+    description:
+      "Comunicadora social y periodista con +3 años de experiencia en el sector organizacional con énfasis en administración de redes, creación de contenido, manejo de Ads y gestión de herramientas de innovación digital.",
+    phrase: "¡Ella impulsa nuestra presencia digital hacia nuevos horizontes!",
+  },
+  {
     name: "ALEJANDRO HERNANDEZ",
     role: "Diseñador Gráfico y Realizador Audiovisual",
     avatar: "/images/avatars/ALEJANDRO.webp",
@@ -52,14 +60,6 @@ const team = [
     description:
       "Comunicadora social y periodista de la Universidad del Norte con +3 años de experiencia en marketing digital, manejo de herramientas de edición, medición y estadísticas de redes sociales, creación de contenido, manejo de Ads y SEO.",
     phrase: "Ella conecta Marcas con Corazones y Mentes.",
-  },
-  {
-    name: "KAROL ARENAS",
-    role: "DIRECTORA DE COMUNICACIONES",
-    avatar: "/images/avatars/KAROL.webp",
-    description:
-      "Comunicadora social y periodista con +3 años de experiencia en el sector organizacional con énfasis en administración de redes, creación de contenido, manejo de Ads y gestión de herramientas de innovación digital.",
-    phrase: "¡Ella impulsa nuestra presencia digital hacia nuevos horizontes!",
   },
 ];
 ---
@@ -103,7 +103,7 @@ const team = [
               name={member.name}
               role={member.role}
               avatar={member.avatar}
-              description={member.description}
+              description={member.phrase}
               target={`popover-${member.name}`}
             />
             <div
@@ -114,7 +114,7 @@ const team = [
             >
               <div class="px-3 py-2 text-primary text-center">
                 <p>
-                  {member.phrase}
+                  {member.description}
                 </p>
               </div>
               <div data-popper-arrow />

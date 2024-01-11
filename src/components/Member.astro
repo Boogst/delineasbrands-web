@@ -5,7 +5,7 @@ const { name, role, avatar, description, target } = Astro.props;
 <article
   data-popover-target={target}
   data-popover-placement="bottom"
-  class="border-4 border-primary p-4 text-center relative hover:scale-105 transition-transform max-w-[285px]"
+  class="border-4 border-primary p-4 text-center relative hover:scale-105 transition-transform w-[285px] group:"
 >
   <img
     src=`${avatar}`
@@ -16,10 +16,10 @@ const { name, role, avatar, description, target } = Astro.props;
     <h2 class="text-2xl text-secondary font-bold">
       {name}
     </h2>
-    <h3 class="text-primary/45 text-sm">
+    <h3 class="text-primary/45 text-xs">
       {role}
     </h3>
-    <p class="text-primary text-sm">
+    <p class="text-primary">
       {description}
     </p>
   </div>
