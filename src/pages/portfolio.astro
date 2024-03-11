@@ -10,82 +10,141 @@ import Footer from "../components/Footer.astro";
     <h1 class="text-center text-primary font-black text-4xl md:text-5xl">
       Portafolio
     </h1>
-    <div class="gap-8 columns-1 md:columns-2 lg:columns-3">
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/2B.webp"
-        alt="Imagen de proyecto 2B Soluctions"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
-        src="/images/projects/KP.webp"
-        alt="Imagen de proyecto Key Property"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
-        src="/images/projects/STECKERL-2.webp"
-        alt="Imagen de proyecto Steckerl"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
-        src="/images/projects/INOXCENTER.webp"
-        alt="Imagen de proyecto Inoxcenter"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/ACESCO.webp"
-        alt="Imagen de proyecto Acesco"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/H&A.webp"
-        alt="Imagen de proyecto Hierros y Aceros"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/SES.webp"
-        alt="Imagen de proyecto SES"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
-        src="/images/projects/NB.webp"
-        alt="Imagen de proyecto Nicoll Beauty"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/SF.webp"
-        alt="Imagen de proyecto San Francisco"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
-        src="/images/projects/SERVIPARAMO.webp"
-        alt="Imagen de proyecto Serviparamo"
-      />
-      <img
-        data-zoomable
-        class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
-        src="/images/projects/COLCRANES.webp"
-        alt="Imagen de proyecto Colcranes"
-      />
+    <div class="gap-8 columns-1 md:columns-2 lg:columns-3" id="my-gallery">
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/2B.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/2B.webp"
+          alt="Imagen de proyecto 2B Soluctions"
+        />
+      </a>
+      <a
+        data-pswp-width="2250"
+        data-pswp-height="2250"
+        href="/images/projects/KP.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
+          src="/images/projects/KP.webp"
+          alt="Imagen de proyecto Key Property"
+        />
+      </a>
+      <a
+        data-pswp-width="2250"
+        data-pswp-height="2250"
+        href="/images/projects/STECKERL-2.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
+          src="/images/projects/STECKERL-2.webp"
+          alt="Imagen de proyecto Steckerl"
+        />
+      </a>
+      <a
+        data-pswp-width="2250"
+        data-pswp-height="2250"
+        href="/images/projects/INOXCENTER.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
+          src="/images/projects/INOXCENTER.webp"
+          alt="Imagen de proyecto Inoxcenter"
+        />
+      </a>
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/ACESCO.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/ACESCO.webp"
+          alt="Imagen de proyecto Acesco"
+        />
+      </a>
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/H&A.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/H&A.webp"
+          alt="Imagen de proyecto Hierros y Aceros"
+        />
+      </a>
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/SES.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/SES.webp"
+          alt="Imagen de proyecto SES"
+        />
+      </a>
+      <a
+        data-pswp-width="2250"
+        data-pswp-height="2250"
+        href="/images/projects/NB.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
+          src="/images/projects/NB.webp"
+          alt="Imagen de proyecto Nicoll Beauty"
+        />
+      </a>
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/SF.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/SF.webp"
+          alt="Imagen de proyecto San Francisco"
+        />
+      </a>
+      <a
+        data-pswp-width="2250"
+        data-pswp-height="2250"
+        href="/images/projects/SERVIPARAMO.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-square mb-6"
+          src="/images/projects/SERVIPARAMO.webp"
+          alt="Imagen de proyecto Serviparamo"
+        />
+      </a>
+      <a
+        data-pswp-width="1920"
+        data-pswp-height="1080"
+        href="/images/projects/COLCRANES.webp"
+      >
+        <img
+          class="hover:scale-105 transition-transform border w-full aspect-video mb-6"
+          src="/images/projects/COLCRANES.webp"
+          alt="Imagen de proyecto Colcranes"
+        />
+      </a>
     </div>
   </main>
   <Footer />
 </Layout>
 
 <script>
-  import mediumZoom from 'medium-zoom'
-  mediumZoom('[data-zoomable]', {
-    background: 'rgba(0,0,0,0.8)'
-  })
-  
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#my-gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
 </script>
