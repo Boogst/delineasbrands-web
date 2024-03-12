@@ -29,6 +29,9 @@ const { title, class: className } = Astro.props;
   </body>
 </html>
 <style is:global>
+  #hubspot-messages-iframe-container {
+    z-index: 1000!important;
+  }
   @font-face {
     font-family: "Montserrat";
     src: url("/fonts/Montserrat-VariableFont_wght.ttf")
